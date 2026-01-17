@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Little Sister! 🎀</title>
+    
+    <link rel="stylesheet" href="webultah.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <div id="emoji-rain"></div>
+
+    <div id="intro-screen">
+        <div class="intro-content">
+            <h1>🎁</h1>
+            <p>Ada paket buat kamu...</p>
+            <button id="btn-open">Buka Sekarang</button>
+        </div>
+    </div>
+
+    <dotlottie-player 
+        id="lottie-confetti"
+        src="asset/Confetti.lottie" 
+        background="transparent" 
+        speed="1" 
+        direction="1" 
+        mode="normal">
+    </dotlottie-player>
+
+    <audio id="bg-music" loop>
+        <source src="lagu.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="card-container" id="main-card">
+        <div class="header-title">🎀 Happy Birthday 🎀</div>
+
+        <div class="nav-buttons">
+            <button class="btn active" data-tab="home">" home "</button>
+            <button class="btn" data-tab="wishes">♡ wishes ♡</button>
+            <button class="btn" data-tab="gallery">. gallery .</button>
+        </div>
+
+        <div id="home" class="tab-content active-tab main-grid">
+            <div class="left-panel">
+                <div class="social-box">
+                    <span class="box-label">interact with me ✿</span>
+                    <div class="icon-row">
+                        <div class="circle-icon" onclick="spamHeart(event)">❤</div>
+                        <div class="circle-icon" onclick="changeTheme()">★</div>
+                        <div class="circle-icon" id="icon-music-toggle" onclick="toggleMusic()">♫</div>
+                    </div>
+                </div>
+                
+                <div class="image-grid">
+                    <img src="asset/foto1.jpeg" class="mini-img" alt="foto1">
+                    <img src="asset/foto2.jpeg" class="mini-img" alt="foto2">
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="about-header">✧ 😺 ✧</div>
+                <div class="banner-video">
+                    <video autoplay muted loop playsinline class="styled-video">
+                        <source src="asset/banner.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                </div>
+                <div class="scroll-text">
+                    <p id="typing-text"></p> 
+                </div>
+            </div>
+        </div>
+
+        <div id="wishes" class="tab-content">
+            <div class="right-panel full-width">
+                <div class="about-header">✿ Make a Wish ✿</div>
+                <ul class="wish-list">
+                    <li>✨ Semoga sehat selalu & panjang umur.</li>
+                    <li>✨ Tidak jadi pemalas.</li>
+                    <li>🤰 Tidak gendut.</li>
+                    <li>🤑 Rajin menabung.</li>
+                    <li>🤓 Pintar & rajin belajar.</li>
+                    <li>🤲 Jadi anak sholehah.</li>
+                    <li>✨ Tinggi 170++.</li>
+                </ul>
+                <button id="btn-surprise" class="btn-full">Klik buat Kejutan! 🎉</button>
+            </div>
+        </div>
+
+        <div id="gallery" class="tab-content">
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/150/ffc2d1/ffffff" class="gallery-item">
+                <img src="https://via.placeholder.com/150/ff9eb5/ffffff" class="gallery-item">
+                <img src="https://via.placeholder.com/150/ffdee6/ffffff" class="gallery-item">
+                <img src="https://via.placeholder.com/150/ffc2d1/ffffff" class="gallery-item">
+            </div>
+            <p class="credits" style="margin-top:10px">Kenangan kita ♡</p>
+        </div>
+
+        <div class="credits">made with ♡</div>
+    </div>
+
+    <script src="webultah.js"></script>
+</body>
+</html>
